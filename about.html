@@ -3,88 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - 中凯</title>
+    <title>About - 中凯 Team Leader</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <nav>
         <div class="nav-content">
-            <a href="index.html" class="logo">
-                <i data-lucide="terminal"></i>
-                <span>中凯</span>
-            </a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
+            <div class="logo">中凯</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <main class="about-page">
-        <div class="about-content">
-            <div class="about-text">
-                <h1>About Our Team</h1>
-                <p>As the team lead of the US Two-Way SMS Group at 中凯, I bring extensive experience
-                in developing and maintaining large-scale messaging systems. Our team specializes
-                in creating robust communication solutions that bridge businesses with their customers
-                through advanced SMS technology.</p>
-                
-                <div class="stats">
-                    <div class="stat-card">
-                        <div class="stat-value">50+</div>
-                        <div class="stat-label">Projects</div>
+    <main>
+        <section class="about-section">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Tech Leader">
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-value">100+</div>
-                        <div class="stat-label">Clients</div>
+                </div>
+                <div class="about-content">
+                    <h1 class="glitch-text">About Me</h1>
+                    <div class="bio-text">
+                        <p>As the Team Leader of 美国双向短信组, I bring extensive experience in full-stack development and team leadership. My approach combines technical expertise with strategic thinking to deliver innovative solutions.</p>
+                        <p>With over a decade of experience in software development, I've led numerous successful projects and mentored talented developers. My focus is on creating efficient, scalable, and maintainable solutions while fostering a collaborative team environment.</p>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-value">1M+</div>
-                        <div class="stat-label">Messages/Day</div>
+                    <div class="achievements">
+                        <h2>Key Achievements</h2>
+                        <ul class="achievement-list">
+                            <li>Led development of enterprise-scale applications</li>
+                            <li>Implemented cutting-edge AI solutions</li>
+                            <li>Optimized system performance by 200%</li>
+                            <li>Mentored 20+ junior developers</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team collaboration">
-            </div>
-        </div>
-
-        <div class="values">
-            <div class="value-card">
-                <i data-lucide="award"></i>
-                <h3>Excellence</h3>
-                <p>Committed to delivering high-quality messaging solutions</p>
-            </div>
-            <div class="value-card">
-                <i data-lucide="users"></i>
-                <h3>Collaboration</h3>
-                <p>Strong team dynamics and client partnerships</p>
-            </div>
-            <div class="value-card">
-                <i data-lucide="zap"></i>
-                <h3>Innovation</h3>
-                <p>Constantly evolving with the latest technology</p>
-            </div>
-        </div>
+        </section>
     </main>
 
+    <div class="cursor"></div>
     <script>
-        lucide.createIcons();
-        
-        // Animate elements on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.value-card, .stat-card, .about-image').forEach(element => {
-            observer.observe(element);
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
         });
     </script>
 </body>

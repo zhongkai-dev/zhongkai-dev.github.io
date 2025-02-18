@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中凯 - US Two-Way SMS Team Lead</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <i data-lucide="terminal"></i>
+                <span>中凯</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <video autoplay loop muted class="background-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-blue-circuits-on-a-black-background-32031-large.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+                <h1><span class="highlight">中凯</span> Team Lead</h1>
+                <p>Specializing in US Two-Way SMS Systems and Advanced Communication Solutions</p>
+            </div>
+        </div>
+
+        <section class="features">
+            <div class="feature-card">
+                <i data-lucide="code-2"></i>
+                <h3>System Architecture</h3>
+                <p>Designing robust SMS communication systems with scalability in mind</p>
+            </div>
+            <div class="feature-card">
+                <i data-lucide="network"></i>
+                <h3>Network Integration</h3>
+                <p>Seamless integration with US carrier networks and messaging protocols</p>
+            </div>
+            <div class="feature-card">
+                <i data-lucide="cpu"></i>
+                <h3>AI Implementation</h3>
+                <p>Leveraging artificial intelligence for smart message routing and analysis</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        lucide.createIcons();
+        
+        // Animate elements on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.feature-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

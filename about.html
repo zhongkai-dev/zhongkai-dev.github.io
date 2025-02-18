@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - 中凯</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <i data-lucide="terminal"></i>
+                <span>中凯</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="about-page">
+        <div class="about-content">
+            <div class="about-text">
+                <h1>About Our Team</h1>
+                <p>As the team lead of the US Two-Way SMS Group at 中凯, I bring extensive experience
+                in developing and maintaining large-scale messaging systems. Our team specializes
+                in creating robust communication solutions that bridge businesses with their customers
+                through advanced SMS technology.</p>
+                
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-value">50+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">100+</div>
+                        <div class="stat-label">Clients</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">1M+</div>
+                        <div class="stat-label">Messages/Day</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team collaboration">
+            </div>
+        </div>
+
+        <div class="values">
+            <div class="value-card">
+                <i data-lucide="award"></i>
+                <h3>Excellence</h3>
+                <p>Committed to delivering high-quality messaging solutions</p>
+            </div>
+            <div class="value-card">
+                <i data-lucide="users"></i>
+                <h3>Collaboration</h3>
+                <p>Strong team dynamics and client partnerships</p>
+            </div>
+            <div class="value-card">
+                <i data-lucide="zap"></i>
+                <h3>Innovation</h3>
+                <p>Constantly evolving with the latest technology</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+        
+        // Animate elements on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.value-card, .stat-card, .about-image').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
